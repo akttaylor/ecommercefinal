@@ -1,0 +1,57 @@
+/* Navigation Styles */
+
+.navbar {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    padding: 1rem 0;
+    box-shadow: 0 4px 15px rgba(45, 80, 22, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-buttons span {
+    color: white;
+    margin-right: 20px;
+}
+
+.welcome-text {
+    color: white;
+    font-weight: 500;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-buttons {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

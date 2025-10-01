@@ -1,0 +1,214 @@
+/* Admin Dashboard Styles */
+
+.admin-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.admin-header {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.admin-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 32px;
+}
+
+.admin-header p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+.categories-section {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.section-header h2 {
+    margin: 0;
+    color: var(--primary-green);
+}
+
+/* Admin Specific Buttons */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: var(--primary-green);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--secondary-green);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(47, 82, 51, 0.3);
+}
+
+.btn-secondary {
+    background: var(--secondary-green);
+    color: white;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+.btn-warning {
+    background: #ffc107;
+    color: #333;
+}
+
+.btn-warning:hover {
+    background: #e0a800;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 12px;
+}
+
+/* Categories Table */
+.categories-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.categories-table th {
+    background: var(--light-gray);
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--dark-gray);
+    border-bottom: 2px solid var(--primary-green);
+}
+
+.categories-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.categories-table tr:hover {
+    background: rgba(143, 188, 143, 0.1);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--dark-gray);
+}
+
+.empty-state h3 {
+    margin-bottom: 10px;
+    color: var(--primary-green);
+}
+
+/* Loading State */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: var(--dark-gray);
+}
+
+/* Welcome Text in Navbar */
+.nav-buttons span {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive Design for Admin */
+@media (max-width: 768px) {
+    .admin-container {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .admin-header {
+        padding: 20px;
+    }
+
+    .admin-header h1 {
+        font-size: 24px;
+    }
+
+    .categories-section {
+        padding: 20px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .categories-table {
+        font-size: 14px;
+    }
+
+    .categories-table th,
+    .categories-table td {
+        padding: 10px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .action-buttons .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .categories-table {
+        font-size: 12px;
+    }
+
+    .categories-table th,
+    .categories-table td {
+        padding: 8px;
+    }
+
+    .btn-sm {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+}

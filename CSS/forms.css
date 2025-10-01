@@ -1,0 +1,175 @@
+/* Form Styles */
+
+.form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.form-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark-green);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid var(--light-green);
+    border-radius: 10px;
+    font-size: 16px;
+    background: var(--white);
+    color: var(--dark-gray);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--secondary-green);
+    box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-control.is-valid {
+    border-color: var(--success-green);
+    background: rgba(40, 167, 69, 0.05);
+}
+
+.form-control.is-invalid {
+    border-color: var(--error-red);
+    background: rgba(220, 53, 69, 0.05);
+}
+
+/* Error and Success Messages */
+.error-message, .success-message {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-weight: 500;
+    font-size: 14px;
+    display: none;
+}
+
+.error-message {
+    background: rgba(220, 53, 69, 0.1);
+    color: var(--error-red);
+    border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+.success-message {
+    background: rgba(40, 167, 69, 0.1);
+    color: var(--success-green);
+    border: 1px solid rgba(40, 167, 69, 0.2);
+}
+
+.field-error {
+    color: var(--error-red);
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Links */
+.form-links {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-links a {
+    color: var(--secondary-green);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.form-links a:hover {
+    color: var(--primary-green);
+    text-decoration: underline;
+}
+
+/* Email Input with Check */
+.email-input-wrapper {
+    position: relative;
+}
+
+/* Email Check Indicator */
+.email-check {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+}
+
+/* Remember Me Checkbox */
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.remember-me label {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Info Box */
+.info-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(74, 124, 89, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.info-box p {
+    color: var(--secondary-green);
+    font-style: italic;
+    margin: 0;
+}
+
+/* Responsive Forms */
+@media (max-width: 768px) {
+    .form-container {
+        margin: 20px;
+        padding: 30px 20px;
+    }
+
+    .form-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 20px;
+    }
+}

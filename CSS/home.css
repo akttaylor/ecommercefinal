@@ -1,0 +1,145 @@
+/* Home Page Styles */
+
+.welcome-section {
+    text-align: center;
+    padding: 60px 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.welcome-section h1 {
+    font-size: 3.5rem;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.welcome-section p {
+    font-size: 1.3rem;
+    color: var(--dark-gray);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    font-size: 18px;
+    padding: 16px 32px;
+}
+
+.cta-buttons .btn-secondary {
+    background: var(--secondary-green);
+    color: white;
+    border: none;
+}
+
+/* Features Section */
+.features-grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.feature-card {
+    background: rgba(143, 188, 143, 0.2);
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 4px solid var(--primary-green);
+    transition: all 0.3s ease;
+}
+
+.feature-card:nth-child(2) {
+    border-left-color: var(--secondary-green);
+}
+
+.feature-card:nth-child(3) {
+    border-left-color: var(--accent-green);
+}
+
+.feature-card h3 {
+    color: var(--primary-green);
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--dark-gray);
+    margin: 0;
+}
+
+/* Statistics Section */
+.statistics {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-green);
+}
+
+.stat-label {
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+footer p:last-child {
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* Responsive Home Page */
+@media (max-width: 768px) {
+    .welcome-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .welcome-section p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-section {
+        padding: 40px 20px;
+        margin: 20px;
+    }
+
+    .welcome-section h1 {
+        font-size: 2rem;
+    }
+}
