@@ -1,33 +1,32 @@
 <?php
-session_start();
 
-
-//for header redirection
-ob_start();
-
-//funtion to check for login
-function isLoggedIn(){
-if (!isset($_SESSION['user_id'])) {
-    return false;
-}
-else{
-    return true;
-}
+// Project session helpers adapted for `final` project keys
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
 }
 
-function isAdmin(){
-    if (isLoggedIn()){
-        return $_SESSION['user_role'] == 2;
+/** Is anyone logged in? */
+function is_logged_in(): bool {
+    return isset($_SESSION['customer_id']) && !empty($_SESSION['customer_id']);
+}
+
+/** Is the logged-in user an admin? (role 1 assumed as admin) */
+function is_admin(): bool {
+    if (!is_logged_in()) return false;
+    return ((int)($_SESSION['user_role'] ?? 0)) === 1;
+}
+
+/** Gatekeepers (use inside admin pages / protected pages) */
+function require_login(): void {
+    if (!is_logged_in()) {
+        header('Location: ../login/login.php'); exit;
     }
 }
 
-
-//function to get user ID
-
-
-//function to check for role (admin, customer, etc)
-
-
-
+function require_admin(): void {
+    if (!is_admin()) {
+        header('Location: ../login/login.php'); exit;
+    }
+}
 
 ?>
