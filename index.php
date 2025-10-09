@@ -93,6 +93,7 @@
         <div class="container">
             <p>© 2025 ShopTaylor. Built with MVC Architecture - Customer Registration Lab</p>
             <p>Sustainable Shopping for a Better Tomorrow 🌍</p>
+            <p>Test</p>
         </div>
     </footer>
 
