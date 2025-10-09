@@ -22,7 +22,7 @@
     <a href="actions/logout.php" class="btn btn-secondary">Logout</a>
 <?php else: ?>
     <a href="login/register.php" class="btn btn-primary">Register</a>
-    <a href="login/login.php" class="btn btn-secondary">Login</a>
+    <a href="login/login.php" class="btn btn-secondary">login</a>
 <?php endif; ?>
 
         </div>
@@ -39,10 +39,10 @@
                 </p>
                 
                 <div class="cta-buttons">
-                    <a href="Login/register.php" class="btn btn-primary">
+                    <a href="login/register.php" class="btn btn-primary">
                         Get Started
                     </a>
-                    <a href="Login/login.php" class="btn btn-secondary">
+                    <a href="login/login.php" class="btn btn-secondary">
                         Sign In
                     </a>
                 </div>
